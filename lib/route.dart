@@ -1,4 +1,5 @@
 import 'package:flplt/pages/animated_cross_fade_step/index.dart';
+import 'package:flplt/pages/button/index.dart';
 import 'package:flplt/pages/orientation/index.dart';
 import 'package:flutter/material.dart';
 import 'pages/chat_list_builder/index.dart';
@@ -36,6 +37,14 @@ class RoutePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                   return const AnimatedCrossFadeStep();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('button'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const Button();
                 }));
               },
             ),

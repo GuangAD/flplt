@@ -38,8 +38,8 @@ class _AnimatedCrossFadeStepState extends State<AnimatedCrossFadeStep> {
           // secondCurve: Curves.easeInBack,
           // firstCurve: const Interval(0, 0.5),
           // secondCurve: const Interval(0.5, 1),
-          // firstCurve: LinerHalfCurve(),
-          // secondCurve: LinerHalfCurve().flipped,
+          firstCurve: LinerHalfCurve(),
+          secondCurve: LinerHalfCurve().flipped,
           crossFadeState: _isShowFirst
               ? CrossFadeState.showFirst
               : CrossFadeState.showSecond,
