@@ -1,8 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BannerPage extends StatelessWidget {
   const BannerPage({Key? key}) : super(key: key);
@@ -57,32 +55,31 @@ class MyBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _style = DefaultTextStyle.of(context).style.merge(textStyle);
-    final _span = TextSpan(text: message, style: _style);
-    final _tp = TextPainter(
-      text: _span,
+    final style = DefaultTextStyle.of(context).style.merge(textStyle);
+    final span = TextSpan(text: message, style: style);
+    final tp = TextPainter(
+      text: span,
       textDirection: TextDirection.ltr,
       textScaleFactor: MediaQuery.of(context).textScaleFactor,
     )..layout();
-    final _width = max<double>(_tp.width * 2, 50);
-    final _height = _tp.height;
+    final width = max<double>(tp.width * 2, 50);
+    final height = tp.height;
     return ClipRect(
       child: Stack(
         children: [
           child,
           Positioned(
             right: 0,
-            top: sqrt(_width * _width / 2 -
-                sqrt2 * _width * _height +
-                _height * _height),
+            top: sqrt(
+                width * width / 2 - sqrt2 * width * height + height * height),
             child: Transform.rotate(
               alignment: Alignment.bottomRight,
               angle: pi / 4,
               child: Container(
                 color: color,
-                width: _width,
-                height: _height,
-                child: Center(child: Text.rich(_span)),
+                width: width,
+                height: height,
+                child: Center(child: Text.rich(span)),
               ),
             ),
           ),
