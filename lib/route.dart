@@ -1,4 +1,5 @@
 import 'package:flplt/pages/animated_cross_fade_step/index.dart';
+import 'package:flplt/pages/banner/index.dart';
 import 'package:flplt/pages/button/index.dart';
 import 'package:flplt/pages/orientation/index.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,14 @@ class RoutePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                   return const Button();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('banner'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const BannerPage();
                 }));
               },
             ),
