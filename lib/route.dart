@@ -3,6 +3,7 @@ import 'package:flplt/pages/animationbutton/index.dart';
 import 'package:flplt/pages/banner/index.dart';
 import 'package:flplt/pages/button/index.dart';
 import 'package:flplt/pages/diagonal/index.dart';
+import 'package:flplt/pages/hollow_text/index.dart';
 import 'package:flplt/pages/orientation/index.dart';
 import 'package:flutter/material.dart';
 import 'pages/chat_list_builder/index.dart';
@@ -72,6 +73,14 @@ class RoutePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                   return const AnimatedButtonPage();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('HollowPage'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const HollowPage();
                 }));
               },
             ),
