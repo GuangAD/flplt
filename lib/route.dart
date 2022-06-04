@@ -1,10 +1,14 @@
-import 'package:flplt/pages/animated_cross_fade_step/index.dart';
-import 'package:flplt/pages/animationbutton/index.dart';
-import 'package:flplt/pages/banner/index.dart';
-import 'package:flplt/pages/button/index.dart';
-import 'package:flplt/pages/diagonal/index.dart';
-import 'package:flplt/pages/hollow_text/index.dart';
-import 'package:flplt/pages/orientation/index.dart';
+import 'package:flplt/pages/animated_cross_fade_step/animated_cross_fade_step.dart';
+import 'package:flplt/pages/animation_button/animation_button.dart';
+import 'package:flplt/pages/banner/banner.dart';
+import 'package:flplt/pages/button/button.dart';
+import 'package:flplt/pages/cut_down_button/cut_down_button.dart';
+import 'package:flplt/pages/diagonal/diagonal.dart';
+import 'package:flplt/pages/gallery_view/gallery_view.dart';
+import 'package:flplt/pages/hollow_text/hollow_text.dart';
+import 'package:flplt/pages/orientation/orientation.dart';
+import 'package:flplt/pages/spring/spring.dart';
+import 'package:flplt/pages/water_mark/water_mark.dart';
 import 'package:flutter/material.dart';
 import 'pages/chat_list_builder/index.dart';
 
@@ -81,6 +85,38 @@ class RoutePage extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) {
                   return const HollowPage();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('WaterMark'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const WaterMarkPage();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('cutdown button'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const CutDownButtonPage();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('GalleryView'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const GalleryView();
+                }));
+              },
+            ),
+            ListTile(
+              title: const Text('Spring'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+                  return const Spring();
                 }));
               },
             ),
